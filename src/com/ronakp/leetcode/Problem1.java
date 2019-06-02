@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Problem1 {
-    /*
+    /**
     Two Sum
     Given an array of integers, return indices of the two numbers such that they add up to a specific target.
     You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -22,9 +22,14 @@ public class Problem1 {
     }
 
     public static int[] Solution1(int[] nums, int target) {
+        /**
+        * Note: Solution1 can't handle duplicate values.
+        * Time Complexity: O(n)
+        * Space Complexity: O(n)
+        */
         int[] answer = new int[2];
-        HashMap<Integer, Integer> inputMap = new HashMap<>();
-        for(int i = 0; i < nums.length; i++ )
+        HashMap<Integer, Integer> inputMap = new HashMap();
+        for(int i = 0; i < nums.length; i++)
         {
             inputMap.put(nums[i], i);
         }
@@ -33,7 +38,9 @@ public class Problem1 {
             int complement = target - entry.getKey();
             if(inputMap.containsKey(complement))
             {
-                return new int[] {entry.getValue(), inputMap.get(complement)};
+                answer[0] = entry.getValue();
+                answer[1] = inputMap.get(complement);
+                return answer;
             }
         }
         return answer;
