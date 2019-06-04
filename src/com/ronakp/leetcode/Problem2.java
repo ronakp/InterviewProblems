@@ -46,7 +46,7 @@ class Problem2 {
 
         int midAnswer = firstNum + secondNum;
         System.out.println(midAnswer);
-        
+
         return answer;
     }
 
