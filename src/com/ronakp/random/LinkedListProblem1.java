@@ -3,7 +3,7 @@ package com.ronakp.random;
 import com.ronakp.random.helper.Node;
 
 public class LinkedListProblem1 {
-    Node head;
+    private Node head;
 
     public void append(int data) {
         if (head.next == null) {
