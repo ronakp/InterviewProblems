@@ -1,4 +1,4 @@
 package com.ronakp.java;
 
-public class Array {
+public class ArrayCustom {
 }
