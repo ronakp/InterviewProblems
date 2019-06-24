@@ -12,5 +12,11 @@ public class StringCustom {
         char[] charObject = { 'H', 'I' };
         String stringObject = new String(charObject);
         System.out.println(stringObject);
+
+        StringBuffer bufferObject = new StringBuffer("Buffer"); // Synchronized, Thread Safe, Slow
+        System.out.println(bufferObject);
+
+        StringBuilder builderObject = new StringBuilder("Builder"); // Not Synchronized, No Thread Safe, Fast
+        System.out.println(builderObject);
     }
 }
