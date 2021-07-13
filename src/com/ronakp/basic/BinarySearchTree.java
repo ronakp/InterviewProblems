@@ -2,12 +2,10 @@ package com.ronakp.basic;
 
 import com.ronakp.basic.helper.TreeNode;
 
-import javafx.geometry.Pos;
-
-public class BinarySearchTreeProblem1 {
+public class BinarySearchTree {
     public TreeNode root;
 
-    public BinarySearchTreeProblem1(int data) {
+    public BinarySearchTree(int data) {
         root = new TreeNode(data);
     }
 

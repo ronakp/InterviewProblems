@@ -2,7 +2,7 @@ package com.ronakp.basic;
 
 import com.ronakp.basic.helper.Node;
 
-public class LinkedListProblem1 {
+public class LinkedList {
     private Node head;
 
     public void append(int data) {

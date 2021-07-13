@@ -29,7 +29,7 @@ public class QueueCustom {
         }
 
         System.out.println("Iterator");
-        Iterator it = object.iterator();
+        Iterator<Integer> it = object.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }

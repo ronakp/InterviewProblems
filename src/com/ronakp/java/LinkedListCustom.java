@@ -44,7 +44,7 @@ public class LinkedListCustom {
         }
 
         System.out.println("Iterator");
-        Iterator it = object.iterator();
+        Iterator<String> it = object.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }

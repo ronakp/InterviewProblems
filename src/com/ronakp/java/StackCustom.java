@@ -27,7 +27,7 @@ public class StackCustom {
         }
 
         System.out.println("Iterator"); // Print form bottom of the Stack
-        Iterator it = object.iterator();
+        Iterator<Integer> it = object.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }

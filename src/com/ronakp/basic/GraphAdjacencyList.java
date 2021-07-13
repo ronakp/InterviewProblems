@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-public class GraphAdjacencyListProblem1<T> {
+public class GraphAdjacencyList<T> {
     
     private HashMap<T, LinkedList<T>> map = new HashMap<>();
 

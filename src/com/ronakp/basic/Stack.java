@@ -2,7 +2,7 @@ package com.ronakp.basic;
 
 import com.ronakp.basic.helper.Node;
 
-public class StackProblem1 {
+public class Stack {
     Node head;
 
     public void push(int data) {

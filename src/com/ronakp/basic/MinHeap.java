@@ -1,5 +1,5 @@
 package com.ronakp.basic;
 
-public class MinHeapProblem1 {
+public class MinHeap {
     
 }

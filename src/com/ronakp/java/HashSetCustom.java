@@ -20,7 +20,7 @@ public class HashSetCustom {
         object.remove("Hi");
         System.out.println(object); //[Hello]
 
-        Iterator it = object.iterator();
+        Iterator<String> it = object.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
         }

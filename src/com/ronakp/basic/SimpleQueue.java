@@ -2,7 +2,7 @@ package com.ronakp.basic;
 
 import com.ronakp.basic.helper.Node;
 
-public class SimpleQueueProblem1 {
+public class SimpleQueue {
     Node head; //Remove
     Node tail; //Add
 
