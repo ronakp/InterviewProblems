@@ -1,4 +1,4 @@
-package com.ronakp.random.helper;
+package com.ronakp.basic.helper;
 
 public class Node {
     public int data;

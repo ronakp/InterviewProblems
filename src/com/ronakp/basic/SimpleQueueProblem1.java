@@ -1,6 +1,6 @@
-package com.ronakp.random;
+package com.ronakp.basic;
 
-import com.ronakp.random.helper.Node;
+import com.ronakp.basic.helper.Node;
 
 public class SimpleQueueProblem1 {
     Node head; //Remove

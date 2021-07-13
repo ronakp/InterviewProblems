@@ -1,24 +1,18 @@
-package com.ronakp.random;
+package com.ronakp.basic;
 
-import java.util.LinkedList;
-
-public class HashMapWithCollisionProblem1<K, V> {
-    /**
-     * Closed Addressing Solution
-     * Chaining
-     * */
+public class HashMapWithoutCollisionProblem1<K, V> {
     private int size = 30;
-    private LinkedList<V>[] dataStore = (LinkedList<V>[]) new Object[size];
+    private V[] dataStore = (V[]) new Object[size];
 
     public void put(K Key, V Value) {
         if(Key == null) {
             throw new NullPointerException();
         }
         int index = hash(Key.hashCode()) % size;
-        dataStore[index].add(Value);
+        dataStore[index] = Value;
     }
 
-    public LinkedList<V> get(K Key) {
+    public V get(K Key) {
         int index = hash(Key.hashCode()) % size;
         return dataStore[index];
     }

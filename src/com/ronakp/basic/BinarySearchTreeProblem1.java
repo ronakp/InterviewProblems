@@ -1,6 +1,7 @@
-package com.ronakp.random;
+package com.ronakp.basic;
 
-import com.ronakp.random.helper.TreeNode;
+import com.ronakp.basic.helper.TreeNode;
+
 import javafx.geometry.Pos;
 
 public class BinarySearchTreeProblem1 {

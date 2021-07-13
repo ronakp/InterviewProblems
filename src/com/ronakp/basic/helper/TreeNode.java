@@ -1,4 +1,4 @@
-package com.ronakp.random.helper;
+package com.ronakp.basic.helper;
 
 public class TreeNode {
     public int data;
