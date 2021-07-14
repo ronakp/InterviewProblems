@@ -79,7 +79,10 @@ public class MaxHeap {
     }
 
     // O(1)
-    public int peek() {
+    public int peek() throws Exception{
+        if(size == 0) {
+            throw new Exception("Invalid Peek");
+        }
         return heap[0];
     }
 
