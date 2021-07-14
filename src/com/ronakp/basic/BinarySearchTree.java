@@ -98,4 +98,28 @@ public class BinarySearchTree {
     public void printPostOrder() {
         PostOrder(root);
     }
+
+    public boolean searchRecursive(TreeNode current, int value) {
+        if(current == null) {
+            return false;
+        } else if(current.data == value) {
+            return true;
+        } else if (value <= current.data) {
+            if(current.left != null) {
+                return searchRecursive(current.left, value);
+            } else {
+                return false;
+            }
+        } else {
+            if(current.right != null) {
+                return searchRecursive(current.right, value);
+            } else {
+                return false;
+            }
+        }
+    }
+
+    public boolean search(int value) {
+        return searchRecursive(root, value);
+    }
 }
