@@ -1,9 +1,13 @@
 package com.ronakp.basic;
 
+import java.beans.DesignMode;
 import java.lang.Exception;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
+
+import javax.lang.model.util.ElementScanner14;
 
 public class GraphAdjacencyList<T> {
     
@@ -17,7 +21,7 @@ public class GraphAdjacencyList<T> {
         }
     }
 
-    public void addEdge(T source, T destination) {
+    public void addEdge(T source, T destination) throws Exception {
         if(!map.containsKey(source)) {
             try {
                 addVertex(source);
@@ -32,7 +36,12 @@ public class GraphAdjacencyList<T> {
                 System.out.println(e);
             }
         }
-        map.get(source).add(destination);
+        if(!map.get(source).contains(destination)) {
+            map.get(source).add(destination);
+        } else {
+            throw new Exception("Edge Exists");
+        }
+        
     }
 
     public void deleteVertex(T v) {
@@ -57,11 +66,42 @@ public class GraphAdjacencyList<T> {
     }
 
     public void DFSTraversal(T root) {
-
+        LinkedList<T> visited = new LinkedList<>();
+        DFSTraversalRecursive(root, visited);
+        for (T element : visited) {
+            System.out.println(element);
+        }
     }
 
-    public void DFSSearch(T v) {
+    public void DFSTraversalRecursive(T source, LinkedList<T> visited) {
+        if (!visited.contains(source)) {
+            visited.add(source);
+            for(T neighbor : map.get(source)) {
+                DFSTraversalRecursive(neighbor, visited);
+            }
+        }
+    }
 
+    public boolean DFSSearch(T source, T destination) {
+        HashSet<T> visited = new HashSet<>();
+        return DFSSearchRecursive(source, destination, visited);
+    }
+
+    public boolean DFSSearchRecursive(T source, T destination, HashSet<T> visited) {
+        if(source == destination) {
+            return true;
+        }
+        visited.add(source);
+        for(T neighbor : map.get(source)) {
+            if(!visited.contains(neighbor)) {
+                if(neighbor == destination) {
+                    return true;
+                } else {
+                    DFSSearchRecursive(neighbor, destination, visited);
+                }
+            }
+        }
+        return false;
     }
 
     public void BFSTraversal(T root) {
