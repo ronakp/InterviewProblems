@@ -18,5 +18,11 @@ public class StringCustom {
 
         StringBuilder builderObject = new StringBuilder("Builder"); // Not Synchronized, No Thread Safe, Fast
         System.out.println(builderObject);
+
+        String string = "Who Am I";
+        String[] stringSplit = string.split(" ");
+        for(String s : stringSplit) {
+            System.out.println(s);
+        }
     }
 }

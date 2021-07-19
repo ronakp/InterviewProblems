@@ -39,6 +39,5 @@ public class PriorityQueueCustom {
         pqInt.add(89);
 
         System.out.println(pqInt);
-
     }
 }
