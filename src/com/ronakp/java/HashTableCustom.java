@@ -7,7 +7,7 @@ import java.util.Set;
 public class HashTableCustom {
 
     public static void main(String[] args) {
-        Hashtable<Integer, String> object = new Hashtable<>();
+        Hashtable<Integer, String> object = new Hashtable<Integer, String>();
 
         object.put(1, "Hi");
         object.put(2, "Hello");
