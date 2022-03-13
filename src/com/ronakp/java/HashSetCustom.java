@@ -20,9 +20,19 @@ public class HashSetCustom {
         object.remove("Hi");
         System.out.println(object); //[Hello]
 
+        //Using for loop
+        for (String element : object) {
+            System.out.println(element);
+        }
+
+        //Using forEach and lambda expression
+        object.forEach((value) -> System.out.println(value));
+
+        //Using iterator
         Iterator<String> it = object.iterator();
         while (it.hasNext()) {
-            System.out.println(it.next());
+            String localValue = it.next();
+            System.out.println(localValue);
         }
     }
 }
