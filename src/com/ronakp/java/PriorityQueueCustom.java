@@ -34,10 +34,30 @@ public class PriorityQueueCustom {
 
         PriorityQueue<Integer> pqInt = new PriorityQueue<>(comparator);
 
-        pqInt.add(78);
-        pqInt.add(30);
-        pqInt.add(89);
+        pqInt.add(3);
+        pqInt.add(1);
+        pqInt.add(2);
 
         System.out.println(pqInt);
+
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
+
+        maxHeap.add(6);
+        maxHeap.add(9);
+        maxHeap.add(5);
+        maxHeap.add(64);
+        maxHeap.add(6);
+
+        System.out.println(maxHeap);
+
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+        minHeap.add(6);
+        minHeap.add(9);
+        minHeap.add(5);
+        minHeap.add(64);
+        minHeap.add(6);
+
+        System.out.println(minHeap);
     }
 }
